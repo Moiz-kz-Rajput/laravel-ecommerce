@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -72,8 +69,10 @@
         </nav>
 
         <main class="py-4">
+            @include('admin.partials.navbar')
             @yield('content')
         </main>
     </div>
+<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
 </body>
 </html>
